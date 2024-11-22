@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-const MenuScreen = () => {
+const EventDetailPage = () => {
   return (
     <View styles={styles.screen}>
       <Text>This is the Home Screen</Text>
@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    paddingTop: StatusBar.currentHeight(),
   },
 });
 
-export default MenuScreen;
+export default EventDetailPage;

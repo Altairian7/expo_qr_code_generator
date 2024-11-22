@@ -177,6 +177,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 10,
     elevation: 8,
+    
   },
   buttonText: {
     color: "#fff",
@@ -193,6 +194,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     backgroundColor: "#9fafca",
     paddingVertical: 10,
+    // position:'absolute'
   },
   navItem: {
     alignItems: "center",
