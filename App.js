@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   SafeAreaView,
+  Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons"; // Ionicons for the icons in the bottom navbar
 
@@ -65,20 +66,20 @@ export default function App() {
 
         <TouchableOpacity
           style={styles.navItem}
-          onPress={() => setCurrentPage("Profile")}
+          onPress={() => setCurrentPage("Terms")}
         >
           <Ionicons
-            name="person-circle-outline"
+            name="document-text-outline"
             size={24}
-            color={currentPage === "Profile" ? "#0e387a" : "#fff"}
+            color={currentPage === "Terms" ? "#0e387a" : "#fff"}
           />
           <Text
             style={[
               styles.navText,
-              currentPage === "Profile" && styles.activeNavText,
+              currentPage === "Terms" && styles.activeNavText,
             ]}
           >
-            Profile
+            Terms
           </Text>
         </TouchableOpacity>
 
@@ -122,20 +123,20 @@ export default function App() {
 
         <TouchableOpacity
           style={styles.navItem}
-          onPress={() => setCurrentPage("Terms")}
+          onPress={() => setCurrentPage("Profile")}
         >
           <Ionicons
-            name="document-text-outline"
+            name="person-circle-outline"
             size={24}
-            color={currentPage === "Terms" ? "#0e387a" : "#fff"}
+            color={currentPage === "Profile" ? "#0e387a" : "#fff"}
           />
           <Text
             style={[
               styles.navText,
-              currentPage === "Terms" && styles.activeNavText,
+              currentPage === "Profile" && styles.activeNavText,
             ]}
           >
-            Terms
+            Profile
           </Text>
         </TouchableOpacity>
       </View>
@@ -146,7 +147,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f0f0f5",
+    backgroundColor: "beige",
+    paddingTop: Platform.OS === 'ios' ? 0 : 16,
   },
   mainContent: {
     flex: 1,
